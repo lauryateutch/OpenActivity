@@ -9,7 +9,7 @@
 
 <ion-content [fullscreen]="true">
 
- <ion-card *ngFor="let activity of (activityList|async)">
+ <ion-card routerLink="/activity-detail" *ngFor="let activity of (activityList|async)">
    <ion-img [src] ="activity.image"> </ion-img>
    <ion-card-header>
     <ion-card-title> {{activity.title}}</ion-card-title>
