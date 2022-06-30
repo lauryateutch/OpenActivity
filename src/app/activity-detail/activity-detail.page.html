@@ -1,12 +1,50 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button> </ion-back-button>
+      <ion-back-button> salut</ion-back-button>
     </ion-buttons>
     <ion-title>activityDetail</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-img [src]="(activityDetail | async)?.image"></ion-img>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        {{(activityDetail| async )?.title}}
+      </ion-card-title>
+
+    </ion-card-header>
+    <ion-card-content> {{(activityDetail| async )?.description}} </ion-card-content>
+
+
+  </ion-card>
+  
+  <ion-card>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label>Duration </ion-label>
+        <ion-chip color="secondary">{{(activityDetail| async )?.duration}}</ion-chip>
+
+      </ion-item>
+      <ion-item>
+        <ion-label>Popularity </ion-label>
+        <ion-chip color="secondary">{{(activityDetail| async )?.popularity}}</ion-chip>
+
+      </ion-item>
+      <ion-item>
+        <ion-label>category</ion-label>
+        <ion-chip color="secondary">{{(activityDetail| async )?.category}}</ion-chip>
+
+      </ion-item>
+      <ion-item>
+        <ion-label>salut </ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+
 
 </ion-content>
